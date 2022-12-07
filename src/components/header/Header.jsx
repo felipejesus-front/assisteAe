@@ -31,7 +31,7 @@ function Header() {
 
 	return (
 		<header
-			className={`transition-shadow transition-all sticky top-0 p-9${
+			className={`transition-all sticky top-0 p-9${
 				scrollPosition > 0 ? " bg-neutral-900 shadow p-5" : " "
 			}`}
 		>
