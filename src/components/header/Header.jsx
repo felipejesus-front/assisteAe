@@ -31,12 +31,12 @@ function Header() {
 
 	return (
 		<header
-			className={`transition-all sticky top-0 p-9${
+			className={`transition-all sticky top-0 p-9 z-50 ${
 				scrollPosition > 0 ? " bg-neutral-900 shadow p-5" : " "
 			}`}
 		>
 			<Container>
-				<div className="flex justify-between content-center sm:justify-center">
+				<div className="flex justify-between content-center sm:justify-center z-50">
 					<Link to="./" className="flex">
 						<img src={Logo} alt="Logotipo" />
 					</Link>
@@ -44,11 +44,11 @@ function Header() {
 						{navList.map((nav, index) => (
 							<Link key={index} to={nav.path} className="flex">
 								<li
-									className={`text-2xl leading-8 font-semibold hover:text-indigo-400 px-2 py-1 transition ${
+									className={`text-2xl leading-8 font-semibold hover:text-indigo-400 px-2 py-1 transition  ${
 										index === active
 											? "text-indigo-400"
 											: ""
-									} `}
+									} sm:text-lg `}
 								>
 									{nav.label}
 								</li>

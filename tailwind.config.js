@@ -9,7 +9,7 @@ module.exports = {
 			xl: { max: "1279px" },
 			// => @media (max-width: 1279px) { ... }
 
-			lg: { max: "1023px" },
+			lg: { max: "1024px" },
 			// => @media (max-width: 1023px) { ... }
 
 			md: { max: "767px" },
@@ -18,7 +18,11 @@ module.exports = {
 			sm: { max: "639px" },
 			// => @media (max-width: 639px) { ... }
 		},
-		extend: {},
+		extend: {
+			dropShadow: {
+				button: "0 0 20px #4F46E5",
+			},
+		},
 	},
 	plugins: [],
 };

@@ -1,7 +1,13 @@
 import React from "react";
+import HeaderSlide from "./headerSlide/HeaderSlide";
 
 function Home() {
-	return <div className="h-[2000px]"> Content</div>;
+	return (
+		<div>
+			<HeaderSlide />
+			Content
+		</div>
+	);
 }
 
 export default Home;

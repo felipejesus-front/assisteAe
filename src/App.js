@@ -9,7 +9,7 @@ function App() {
 			<HashRouter>
 				<Header />
 
-				<main>
+				<main className="-mt-[112px] min-h-screen">
 					<Routes>
 						<Route path="/" element={<Home />} />
 						{/* Estes caminhos foram feitos para teste e já serão colocados seus componentes corretos */}
