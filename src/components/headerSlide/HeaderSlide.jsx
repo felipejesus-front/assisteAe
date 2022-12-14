@@ -20,7 +20,15 @@ function HeaderSlide() {
 					movieTypes.popular,
 					{ params }
 				);
-				setSlide(response.results.slice(0, 10));
+
+				const moviesWithOverview = response.results
+					.filter((result) => {
+						if (result.overview) return result;
+						return false;
+					})
+					.slice(0, 10);
+
+				setSlide(moviesWithOverview);
 			} catch (error) {
 				throw error;
 			}

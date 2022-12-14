@@ -9,7 +9,11 @@ const axiosClient = axios.create({
 	},
 
 	paramsSerializer: (params) =>
-		queryString.stringify({ ...params, api_key: apiConfig.apiKey }),
+		queryString.stringify({
+			...params,
+			api_key: apiConfig.apiKey,
+			language: apiConfig.language,
+		}),
 });
 
 axiosClient.interceptors.request.use(async (config) => config);
