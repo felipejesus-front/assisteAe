@@ -22,6 +22,9 @@ module.exports = {
 			dropShadow: {
 				button: "0 0 20px #4F46E5",
 			},
+			backgroundImage: {
+				"indication-bg": "url('/src/assets/indication-bg.svg')",
+			},
 		},
 	},
 	plugins: [],

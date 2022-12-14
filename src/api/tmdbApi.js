@@ -1,3 +1,4 @@
+import apiConfig from "./apiConfig";
 import axiosClient from "./axiosClient";
 
 export const category = {
@@ -16,6 +17,45 @@ export const tvTypes = {
 	top_rated: "top_rated",
 	on_the_air: "on_the_air",
 };
+
+export const indications = [
+	{
+		logo: apiConfig.w500Image("q9rPBG1rHbUjII1Qn98VG2v7cFa.png"),
+		params: {
+			language: "pt-BR",
+			sort_by: "popularity.desc",
+			page: 1,
+			with_networks: 43,
+		},
+	},
+	{
+		logo: apiConfig.w500Image("jTPNzDEn7eHmp3nEXEEtkHm6jLg.png"),
+		params: {
+			language: "pt-BR",
+			sort_by: "popularity.desc",
+			page: 1,
+			with_companies: 3475,
+		},
+	},
+	{
+		logo: apiConfig.w500Image("837VMM4wOkODc1idNxGT0KQJlej.png"),
+		params: {
+			language: "pt-BR",
+			sort_by: "popularity.desc",
+			page: 1,
+			with_companies: 7505,
+		},
+	},
+	{
+		logo: apiConfig.w500Image("kGRavMqgyx4p2X4C96bjRCj50oI.png"),
+		params: {
+			language: "pt-BR",
+			sort_by: "popularity.desc",
+			page: 1,
+			with_networks: 98,
+		},
+	},
+];
 
 const tmdbApi = {
 	getMoviesList: (type, params) => {
@@ -45,6 +85,10 @@ const tmdbApi = {
 	similar: (categ, id) => {
 		const url = category[categ] + "/" + id + "/similar";
 		return axiosClient.get(url, { params: {} });
+	},
+	discover: (categ, params) => {
+		const url = "discover/" + category[categ];
+		return axiosClient.get(url, params);
 	},
 };
 

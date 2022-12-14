@@ -49,7 +49,7 @@ function HeaderSlide() {
 							className="flex justify-center relative 
 							bg-cover bg-no-repeat bg-center
 							before:content-[''] before:block before:bg-neutral-900 before:opacity-60 before:h-[90vh] before:w-full
-							after: content-[''] after:block after:bottom-0 after:h-40 after:w-full after:absolute
+							after:content-[''] after:block after:bottom-0 after:h-40 after:w-full after:absolute
 							after:bg-gradient-to-t from-neutral-900 sm:after:h-20"
 							style={{
 								backgroundImage: `url(${apiConfig.originalImage(
@@ -58,7 +58,7 @@ function HeaderSlide() {
 							}}
 						>
 							{({ isActive }) => (
-								<Container className="absolute mt-48">
+								<Container className="absolute mt-40">
 									<div className="grid grid-cols-[7fr_5fr] px-4 items-center gap-10 lg:grid-cols-[1fr] lg:text-center lg:p-2">
 										<div>
 											<h1
