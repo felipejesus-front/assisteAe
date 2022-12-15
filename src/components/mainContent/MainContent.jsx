@@ -1,5 +1,5 @@
 import IndicationsComponent from "../../indicationsComponent/IndicationsComponent";
-import MediaSlide from "../mediaSlide/MediaSlide";
+import MediaSlideGroup from "../mediaSlide/MediaSlideGroup";
 
 function MainContent() {
 	return (
@@ -8,7 +8,7 @@ function MainContent() {
 		before:bg-gradient-to-b from-neutral-900 sm:before:h-20"
 		>
 			<IndicationsComponent />
-			<MediaSlide title={"Filmes em alta"} />
+			<MediaSlideGroup />
 		</main>
 	);
 }

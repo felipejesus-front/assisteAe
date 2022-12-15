@@ -25,14 +25,14 @@ function MediaSlideContent(props) {
 	}, [rate]);
 
 	return (
-		<div className="md:mx-auto group ">
+		<div className="group ">
 			<a href="/" className="relative">
 				<div className="mb-2 group-hover:scale-105 duration-300">
 					<div
-						className="flex justify-center items-center relative py-[80%] rounded-md bg-cover 
-						md:mx-auto  md:h-[300px] md:w-[200px] md:pt-0 group-hover:border-2 group-hover:border-neutral-200
+						className="flex justify-center items-center relative bg-center py-[80%] rounded-md bg-cover 
+						sm:mx-auto sm:h-[300px] sm:w-[200px] sm:py-0 group-hover:border-2 group-hover:border-neutral-200
 						after:content-['Detalhes'] after:absolute after:py-2 after:px-4 after:bg-indigo-600 after:rounded-lg
-						after:drop-shadow-button after:hidden group-hover:after:block
+						after:drop-shadow-button after:hidden group-hover:after:block 
 						before:h-full before:rounded before:w-full before:bg-neutral-900 before:absolute before:opacity-60 before:hidden group-hover:before:block"
 						style={{
 							backgroundImage: `url(${
@@ -42,7 +42,7 @@ function MediaSlideContent(props) {
 							})`,
 						}}
 					></div>
-					<div className="h-9 w-9 absolute -top-4 right-1">
+					<div className="h-9 w-9 absolute -top-4 right-1 sm:right-1/4">
 						<CircularProgressbar
 							strokeWidth={8}
 							background={"#171717"}
@@ -51,23 +51,16 @@ function MediaSlideContent(props) {
 							text={rate ? `${rate}%` : "SV"}
 							styles={{
 								path: {
-									// Path color
 									stroke: `${rateColor}`,
-									// Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
 									strokeLinecap: "round",
-									// Customize transition animation
 									transition: "stroke-dashoffset 3s ease 0s",
 								},
 								trail: {
-									// Trail color
 									stroke: "#171717",
-									// Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
 									strokeLinecap: "round",
 								},
 								text: {
-									// Text color
 									fill: "#F5F5F5",
-									// Text size
 									fontSize: "1.5rem",
 								},
 								background: {

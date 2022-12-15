@@ -40,6 +40,7 @@ function HeaderSlide() {
 			<Swiper
 				slidesPerView={1}
 				spaceBetween={0}
+				initialSlide={1}
 				loop={true}
 				pagination={{
 					clickable: true,
@@ -77,6 +78,7 @@ function HeaderSlide() {
 												{slide.title}
 											</h1>
 											<p
+												alt="slide.overview"
 												className={`text-2xl leading-8 font-medium max-w-2xl mb-5 max-h-[6ch] overflow-hidden
 											duration-300 delay-[600ms] 
 											${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}
