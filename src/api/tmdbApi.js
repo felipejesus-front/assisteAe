@@ -16,6 +16,7 @@ export const tvTypes = {
 	popular: "popular",
 	top_rated: "top_rated",
 	on_the_air: "on_the_air",
+	anime: "anime",
 };
 
 export const indications = [
@@ -88,7 +89,7 @@ const tmdbApi = {
 	},
 	discover: (categ, params) => {
 		const url = "discover/" + category[categ];
-		return axiosClient.get(url, params);
+		return axiosClient.get(url, { params });
 	},
 };
 
