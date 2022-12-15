@@ -33,7 +33,7 @@ function MediaSlideContent(props) {
 						className="flex justify-center items-center relative bg-center py-[80%] rounded-md bg-cover 
 						sm:mx-auto sm:h-[300px] sm:w-[200px] sm:py-0 group-hover:border-2 group-hover:border-neutral-200
 						after:content-['Detalhes'] after:absolute after:py-2 after:px-4 after:bg-indigo-600 after:rounded-lg
-						after:drop-shadow-button after:hidden group-hover:after:block after:hover:animate-pulse
+						after:drop-shadow-button after:hidden group-hover:after:block after:group-hover:animate-pulse
 						before:h-full before:rounded before:w-full before:bg-neutral-900 before:absolute before:opacity-60 before:hidden group-hover:before:block"
 						style={{
 							backgroundImage: `url(${
