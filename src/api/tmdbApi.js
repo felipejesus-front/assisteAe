@@ -96,6 +96,14 @@ const tmdbApi = {
 		const url = "discover/" + category[categ];
 		return axiosClient.get(url, { params });
 	},
+	getMovieClassification: (id) => {
+		const url = "movie/" + id + "/release_dates";
+		return axiosClient.get(url, { params: {} });
+	},
+	getTvClassification: (id) => {
+		const url = "tv/" + id + "/content_ratings";
+		return axiosClient.get(url, { params: {} });
+	},
 };
 
 export default tmdbApi;

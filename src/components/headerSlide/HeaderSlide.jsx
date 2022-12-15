@@ -46,10 +46,10 @@ function HeaderSlide() {
 				pagination={{
 					clickable: true,
 				}}
-				autoplay={{
-					delay: 5000,
-					disableOnInteraction: false,
-				}}
+				// autoplay={{
+				// 	delay: 5000,
+				// 	disableOnInteraction: false,
+				// }}
 				modules={[Pagination, Autoplay]}
 			>
 				<div>
@@ -72,8 +72,8 @@ function HeaderSlide() {
 									<div className="grid grid-cols-[7fr_5fr] px-4 items-center gap-10 lg:grid-cols-[1fr] lg:text-center lg:p-2">
 										<div>
 											<h1
-												className={`text-6xl leading-none font-semibold duration-300 delay-300
-											 mb-10 max-w-2xl max-h-[3ch] overflow-hidden sm:text-4xl sm:max-h-[3.5ch]
+												className={`text-6xl leading-[4.5rem] font-semibold duration-300 delay-300
+											 mb-10 max-w-2xl max-h-[4ch] overflow-hidden sm:text-4xl sm:max-h-[3.5ch]
 											 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-24"}`}
 											>
 												{slide.title}
