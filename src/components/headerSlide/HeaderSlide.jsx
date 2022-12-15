@@ -8,6 +8,7 @@ import apiConfig from "../../api/apiConfig";
 import Container from "../Container";
 import { useEffect, useState } from "react";
 import tmdbApi, { movieTypes } from "../../api/tmdbApi";
+import { Link } from "react-router-dom";
 
 function HeaderSlide() {
 	const [slide, setSlide] = useState([]);
@@ -85,8 +86,8 @@ function HeaderSlide() {
 											>
 												{slide.overview}
 											</p>
-											<a
-												href="/"
+											<Link
+												to={`/movie/${slide.id}`}
 												className={`inline-block 
 				  								text-2xl leading-8 font-semibold  
 												py-4 px-8 bg-indigo-600 rounded-lg drop-shadow-button 
@@ -97,7 +98,7 @@ function HeaderSlide() {
 												} `}
 											>
 												Mais Detalhes
-											</a>
+											</Link>
 										</div>
 										<div className="lg:hidden">
 											<img

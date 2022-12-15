@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { Link } from "react-router-dom";
 import apiConfig from "../../api/apiConfig";
 import NoTitle from "../../assets/notitle.jpg";
 
@@ -25,14 +26,14 @@ function MediaSlideContent(props) {
 	}, [rate]);
 
 	return (
-		<div className="group ">
-			<a href="/" className="relative">
+		<div className="group sm:w-52 sm:mx-auto">
+			<Link to={`/${props.category}/${slide.id}`} className="relative">
 				<div className="mb-2 group-hover:scale-105 duration-300">
 					<div
 						className="flex justify-center items-center relative bg-center py-[80%] rounded-md bg-cover 
 						sm:mx-auto sm:h-[300px] sm:w-[200px] sm:py-0 group-hover:border-2 group-hover:border-neutral-200
 						after:content-['Detalhes'] after:absolute after:py-2 after:px-4 after:bg-indigo-600 after:rounded-lg
-						after:drop-shadow-button after:hidden group-hover:after:block 
+						after:drop-shadow-button after:hidden group-hover:after:block after:hover:animate-pulse
 						before:h-full before:rounded before:w-full before:bg-neutral-900 before:absolute before:opacity-60 before:hidden group-hover:before:block"
 						style={{
 							backgroundImage: `url(${
@@ -42,7 +43,7 @@ function MediaSlideContent(props) {
 							})`,
 						}}
 					></div>
-					<div className="h-9 w-9 absolute -top-4 right-1 sm:right-1/4">
+					<div className="h-9 w-9 absolute -top-4 right-1 sm:right-2">
 						<CircularProgressbar
 							strokeWidth={8}
 							background={"#171717"}
@@ -73,7 +74,7 @@ function MediaSlideContent(props) {
 				<h3 className="text-xl leading-7 font-medium max-h-[4.5ch] md:text-center overflow-hidden ">
 					{slide.title || slide.name}
 				</h3>
-			</a>
+			</Link>
 		</div>
 	);
 }

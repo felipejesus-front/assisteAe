@@ -28,7 +28,13 @@ function MediaSlideGroup() {
 			<MediaSlide
 				title={"Animes"}
 				category={category.tv}
-				searchType={tvTypes.anime}
+				searchType={tvTypes.discover}
+				adicionalParams={{ with_keywords: 210024 }}
+			/>
+			<MediaSlide
+				title={"Filmes de anime"}
+				category={category.movie}
+				searchType={tvTypes.discover}
 				adicionalParams={{ with_keywords: 210024 }}
 			/>
 		</div>

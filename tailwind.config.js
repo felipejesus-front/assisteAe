@@ -17,6 +17,9 @@ module.exports = {
 
 			sm: { max: "639px" },
 			// => @media (max-width: 639px) { ... }
+
+			xs: { max: "419px" },
+			// => @media (max-width: 419px)
 		},
 		extend: {
 			dropShadow: {

@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import Container from "../Container";
 import MediaSlideContent from "./MediaSlideContent";
 import tmdbApi from "../../api/tmdbApi";
+import { Link } from "react-router-dom";
 
 function MediaSlide(props) {
 	const [slide, setSlide] = useState([]);
@@ -16,8 +17,7 @@ function MediaSlide(props) {
 			const params = { page: 1 };
 
 			let response = null;
-			if (props.searchType === "anime") {
-				console.log("chegou aqui");
+			if (props.searchType === "discover") {
 				response = await tmdbApi.discover(props.category, {
 					...params,
 					...props.adicionalParams,
@@ -49,9 +49,21 @@ function MediaSlide(props) {
 	return (
 		<div className="mb-10 ">
 			<Container>
-				<h2 className="text-3xl leading-9 font-semibold mb-2">
-					{props.title}
-				</h2>
+				<div className="flex justify-between items-center mb-2 sm:px-1">
+					<h2 className="text-3xl leading-9 font-semibold xs:text-xl">
+						{props.title}
+					</h2>
+					<Link
+						to={`/${props.category}`}
+						className="py-2 px-4 text-lg rounded-lg hover:text-indigo-400  underline underline-offset-2 xs:text-sm"
+						state={{
+							searchType: props.searchType,
+							adicionalParams: props.adicionalParams,
+						}}
+					>
+						Ver mais do tipo
+					</Link>
+				</div>
 			</Container>
 			<Swiper
 				style={{ paddingTop: "30px", paddingBottom: "30px" }}
@@ -59,7 +71,7 @@ function MediaSlide(props) {
 				before:bg-gradient-to-r from-neutral-800 before:z-10  after:content-[''] after:block after:right-0 after:top-0 after:h-full after:w-[10%] after:absolute
 				after:bg-gradient-to-l after:from-neutral-800 after:z-[9]"
 				slidesPerView={1}
-				initialSlide={0}
+				initialSlide={1}
 				navigation={true}
 				spaceBetween={40}
 				pagination={{
@@ -102,7 +114,10 @@ function MediaSlide(props) {
 			>
 				{slide.map((slide, index) => (
 					<SwiperSlide key={index}>
-						<MediaSlideContent slide={slide} />
+						<MediaSlideContent
+							slide={slide}
+							category={props.category}
+						/>
 					</SwiperSlide>
 				))}
 			</Swiper>
