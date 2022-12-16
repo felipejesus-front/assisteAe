@@ -130,7 +130,8 @@ function MediaDetailsHeader(props) {
 										alt={mediaData.title || mediaData.name}
 										className={`text-base leading-6 font-medium max-w-3xl mb-5`}
 									>
-										Esta mídia não possui sinopse
+										Esta mídia não possui sinopse em
+										português
 									</p>
 								)}
 
