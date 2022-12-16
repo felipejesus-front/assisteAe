@@ -104,6 +104,10 @@ const tmdbApi = {
 		const url = "tv/" + id + "/content_ratings";
 		return axiosClient.get(url, { params: {} });
 	},
+	getProviders: (categ, id) => {
+		const url = category[categ] + "/" + id + "/watch/providers";
+		return axiosClient.get(url, { params: {} });
+	},
 };
 
 export default tmdbApi;

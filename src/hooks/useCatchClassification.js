@@ -8,13 +8,10 @@ function useCatchClassification() {
 
 	useEffect(() => {
 		async function getClassification() {
-			const params = {};
 			try {
 				if (category === "movie") {
 					const classificationData =
-						await tmdbApi.getMovieClassification(id, {
-							params,
-						});
+						await tmdbApi.getMovieClassification(id);
 
 					const classificationBR = classificationData.results.filter(
 						(i) => i.iso_3166_1 === "BR"
@@ -23,9 +20,7 @@ function useCatchClassification() {
 					setClassification(classificationBR);
 				} else {
 					const classificationData =
-						await tmdbApi.getTvClassification(id, {
-							params,
-						});
+						await tmdbApi.getTvClassification(id);
 					const classificationBR = classificationData.results.filter(
 						(i) => i.iso_3166_1 === "BR"
 					)[0].rating;
