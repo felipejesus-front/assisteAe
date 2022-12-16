@@ -27,7 +27,7 @@ function MediaDetails() {
 	return (
 		<>
 			<MediaDetailsHeader mediaData={media} />
-			<MainContent> SHIBA</MainContent>
+			<MainContent></MainContent>
 		</>
 	);
 }
