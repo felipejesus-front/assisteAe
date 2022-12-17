@@ -30,18 +30,41 @@ function MediaCast({ category, id }) {
 
 			<Swiper
 				className="mb-20"
-				slidesPerView={6}
+				slidesPerView={1}
+				initialSlide={0}
 				scrollbar={{
 					hide: true,
 				}}
 				modules={[Scrollbar]}
+				breakpoints={{
+					420: {
+						slidesPerView: 2,
+						spaceBetween: 40,
+					},
+					640: {
+						slidesPerView: 3,
+						spaceBetween: 40,
+					},
+					768: {
+						slidesPerView: 4,
+						spaceBetween: 40,
+					},
+					1024: {
+						slidesPerView: 5,
+						spaceBetween: 40,
+					},
+					1280: {
+						slidesPerView: 6,
+						spaceBetween: 40,
+					},
+				}}
 			>
 				{castData.map((cast, index) => (
 					<SwiperSlide
 						key={index}
 						className="hover:cursor-grab active:cursor-grabbing"
 					>
-						<div className="w-[167px]">
+						<div className="w-[167px] sm:mx-auto">
 							<div
 								className="py-[58%] bg-cover bg-center rounded-t-lg"
 								style={{
