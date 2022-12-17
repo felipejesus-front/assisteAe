@@ -68,7 +68,7 @@ function HeaderSlide() {
 							}}
 						>
 							{({ isActive }) => (
-								<Container className="absolute mt-40">
+								<Container className="absolute mt-40 hover:cursor-grab">
 									<div className="grid grid-cols-[7fr_5fr] px-4 items-center gap-10 lg:grid-cols-[1fr] lg:text-center lg:p-2">
 										<div>
 											<h1
