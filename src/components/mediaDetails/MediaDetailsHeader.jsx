@@ -40,9 +40,14 @@ function MediaDetailsHeader(props) {
 					after:content-[''] after:block after:bottom-0 after:h-40 after:w-full after:absolute after:bg-gradient-to-t 
 					from-neutral-900 sm:after:h-20 lg:bg-center"
 					style={{
-						backgroundImage: `url(${apiConfig.originalImage(
+						backgroundImage: `url(${
 							mediaData.backdrop_path || mediaData.poster_path
-						)})`,
+								? apiConfig.originalImage(
+										mediaData.backdrop_path ||
+											mediaData.poster_path
+								  )
+								: ""
+						})`,
 					}}
 				>
 					<Container className="absolute mt-40 xs:mt-28">
