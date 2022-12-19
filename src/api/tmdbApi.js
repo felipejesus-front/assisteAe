@@ -88,8 +88,8 @@ const tmdbApi = {
 		const url = category[categ] + "/" + id + "/credits";
 		return axiosClient.get(url, { params: {} });
 	},
-	similar: (categ, id) => {
-		const url = category[categ] + "/" + id + "/similar";
+	recommendations: (categ, id) => {
+		const url = category[categ] + "/" + id + "/recommendations";
 		return axiosClient.get(url, { params: {} });
 	},
 	discover: (categ, params) => {

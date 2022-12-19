@@ -46,7 +46,7 @@ function MediaVideos({ category, id }) {
 							<SwiperSlide key={index}>
 								<iframe
 									className="mx-auto w-[480px] h-80 lg:w-full lg:h-[500px] sm:h-[320px] xs:h-[240px]"
-									src={`https://www.youtube.com/embed/${video.key}?rel=0&enablejsapi=1`}
+									src={`http://www.youtube.com/embed/${video.key}?rel=0&enablejsapi=1`}
 									title={video.name}
 								></iframe>
 							</SwiperSlide>

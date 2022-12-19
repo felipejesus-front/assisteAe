@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import tmdbApi from "../../api/tmdbApi";
 import MainContent from "../mainContent/MainContent";
+import MediaSlide from "../mediaSlide/MediaSlide";
 import MediaCast from "./MediaCast";
 import MediaDetailsHeader from "./MediaDetailsHeader";
 import MediaVideos from "./MediaVideos";
@@ -34,6 +35,12 @@ function MediaDetails() {
 				<MediaWatch category={category} id={id} />
 				<MediaCast category={category} id={id} />
 				<MediaVideos category={category} id={id} />
+				<MediaSlide
+					title={"Recomendações"}
+					category={category}
+					searchType="recomendations"
+					id={id}
+				/>
 			</MainContent>
 		</>
 	);

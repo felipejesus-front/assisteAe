@@ -23,7 +23,7 @@ function MediaSlide(props) {
 					...props.adicionalParams,
 				});
 				setSlide(response.results);
-			} else if (props.mediaType !== "recomendations") {
+			} else if (props.searchType !== "recomendations") {
 				if (props.category === "movie") {
 					response = await tmdbApi.getMoviesList(props.searchType, {
 						params,
@@ -36,6 +36,13 @@ function MediaSlide(props) {
 					});
 					setSlide(response.results);
 				}
+			} else if (props.searchType === "recomendations") {
+				response = await tmdbApi.recommendations(
+					props.category,
+					props.id
+				);
+				console.log("recomendations");
+				setSlide(response.results);
 			}
 		}
 		getSlides();
@@ -44,6 +51,7 @@ function MediaSlide(props) {
 		props.searchType,
 		props.category,
 		props.adicionalParams,
+		props.id,
 	]);
 
 	return (
