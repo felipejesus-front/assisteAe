@@ -4,6 +4,7 @@ import tmdbApi from "../../api/tmdbApi";
 import MainContent from "../mainContent/MainContent";
 import MediaCast from "./MediaCast";
 import MediaDetailsHeader from "./MediaDetailsHeader";
+import MediaVideos from "./MediaVideos";
 import MediaWatch from "./MediaWatch";
 
 function MediaDetails() {
@@ -32,6 +33,7 @@ function MediaDetails() {
 			<MainContent>
 				<MediaWatch category={category} id={id} />
 				<MediaCast category={category} id={id} />
+				<MediaVideos category={category} id={id} />
 			</MainContent>
 		</>
 	);

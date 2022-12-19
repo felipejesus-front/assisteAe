@@ -90,6 +90,12 @@ function MediaCast({ category, id }) {
 						</div>
 					</SwiperSlide>
 				))}
+				{castData.length === 0 ? (
+					<p className="text-2xl leading-8 font-medium ">
+						Que pena... mas esta mídia não possui elenco cadastrado.
+						😔
+					</p>
+				) : null}
 			</Swiper>
 		</Container>
 	);

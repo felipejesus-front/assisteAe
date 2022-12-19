@@ -23,7 +23,7 @@ function MediaSlide(props) {
 					...props.adicionalParams,
 				});
 				setSlide(response.results);
-			} else if (props.mediaType !== "similar") {
+			} else if (props.mediaType !== "recomendations") {
 				if (props.category === "movie") {
 					response = await tmdbApi.getMoviesList(props.searchType, {
 						params,

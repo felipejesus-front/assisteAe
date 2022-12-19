@@ -20,9 +20,9 @@ function Footer() {
 					techniques and portfolio. This project uses the TMDB API
 				</p>
 			</div>
-			<div>
+			<a href="https://www.themoviedb.org/">
 				<img src={Tmdb} alt="" />
-			</div>
+			</a>
 		</footer>
 	);
 }
