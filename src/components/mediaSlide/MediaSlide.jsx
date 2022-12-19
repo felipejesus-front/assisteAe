@@ -23,7 +23,7 @@ function MediaSlide(props) {
 					...props.adicionalParams,
 				});
 				setSlide(response.results);
-			} else if (props.searchType !== "recomendations") {
+			} else if (props.searchType !== "recommendations") {
 				if (props.category === "movie") {
 					response = await tmdbApi.getMoviesList(props.searchType, {
 						params,
@@ -36,12 +36,11 @@ function MediaSlide(props) {
 					});
 					setSlide(response.results);
 				}
-			} else if (props.searchType === "recomendations") {
+			} else if (props.searchType === "recommendations") {
 				response = await tmdbApi.recommendations(
 					props.category,
 					props.id
 				);
-				console.log("recomendations");
 				setSlide(response.results);
 			}
 		}

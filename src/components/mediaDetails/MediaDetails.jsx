@@ -38,7 +38,7 @@ function MediaDetails() {
 				<MediaSlide
 					title={"Recomendações"}
 					category={category}
-					searchType="recomendations"
+					searchType="recommendations"
 					id={id}
 				/>
 			</MainContent>
