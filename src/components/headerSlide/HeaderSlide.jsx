@@ -73,7 +73,7 @@ function HeaderSlide() {
 										<div>
 											<h1
 												className={`text-6xl leading-[4.5rem] font-semibold duration-300 delay-300
-											 mb-10 max-w-2xl max-h-[4ch] overflow-hidden sm:text-4xl sm:max-h-[3.5ch]
+											 mb-10 max-w-2xl max-h-[3.8ch] overflow-hidden sm:text-4xl sm:max-h-[3.5ch]
 											 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-24"}`}
 											>
 												{slide.title}
