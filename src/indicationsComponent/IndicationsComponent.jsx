@@ -31,8 +31,13 @@ function IndicationsComponent() {
 				{indications.map((indication, index) => (
 					<SwiperSlide key={index} className="my-20">
 						<Link
-							to={`discover/`}
-							state={indication.params}
+							to={`${indication.category}/`}
+							state={{
+								title: indication.title,
+								category: indication.category,
+								searchType: indication.searchType,
+								adicionalParams: indication.adicionalParams,
+							}}
 							key={index}
 							className="bg-neutral-500 flex justify-center items-center h-40 max-w-[270px] hover:scale-105 rounded-lg duration-300 relative
 							 hover:drop-shadow-button hover:bg-neutral-400  lg:mx-auto border-2 border-neutral-400 "

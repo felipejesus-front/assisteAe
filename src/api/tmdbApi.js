@@ -24,7 +24,9 @@ export const indications = [
 	{
 		logo: apiConfig.w500Image("q9rPBG1rHbUjII1Qn98VG2v7cFa.png"),
 		category: category.tv,
-		params: {
+		searchType: tvTypes.discover,
+		title: "National Geographic",
+		adicionalParams: {
 			language: "pt-BR",
 			sort_by: "popularity.desc",
 			page: 1,
@@ -34,7 +36,9 @@ export const indications = [
 	{
 		logo: apiConfig.w500Image("jTPNzDEn7eHmp3nEXEEtkHm6jLg.png"),
 		category: category.tv,
-		params: {
+		searchType: tvTypes.discover,
+		title: "Disney",
+		adicionalParams: {
 			language: "pt-BR",
 			sort_by: "popularity.desc",
 			page: 1,
@@ -44,7 +48,9 @@ export const indications = [
 	{
 		logo: apiConfig.w500Image("837VMM4wOkODc1idNxGT0KQJlej.png"),
 		category: category.movie,
-		params: {
+		searchType: movieTypes.discover,
+		title: "Marvel (MCU)",
+		adicionalParams: {
 			language: "pt-BR",
 			sort_by: "popularity.desc",
 			page: 1,
@@ -54,7 +60,9 @@ export const indications = [
 	{
 		logo: apiConfig.w500Image("kGRavMqgyx4p2X4C96bjRCj50oI.png"),
 		category: category.tv,
-		params: {
+		searchType: tvTypes.discover,
+		title: "Tv Tokyo",
+		adicionalParams: {
 			language: "pt-BR",
 			sort_by: "popularity.desc",
 			page: 1,

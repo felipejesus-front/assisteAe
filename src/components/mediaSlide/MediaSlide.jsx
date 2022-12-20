@@ -54,16 +54,23 @@ function MediaSlide(props) {
 	]);
 
 	return (
-		<div className="mb-10 ">
+		<div className="mb-20">
 			<Container>
 				<div className="flex justify-between items-center mb-2 sm:px-1">
 					<h2 className="text-3xl leading-9 font-semibold xs:text-xl">
 						{props.title}
 					</h2>
+
 					<Link
 						to={`/${props.category}`}
-						className="py-2 px-4 text-lg rounded-lg hover:text-indigo-400  underline underline-offset-2 xs:text-sm"
+						className={`py-2 px-4 text-lg rounded-lg hover:text-indigo-400  underline underline-offset-2 xs:text-sm ${
+							props.searchType === "recommendations"
+								? "hidden"
+								: ""
+						}`}
 						state={{
+							title: props.title,
+							category: props.category,
 							searchType: props.searchType,
 							adicionalParams: props.adicionalParams,
 						}}
