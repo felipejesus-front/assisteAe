@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import tmdbApi, { movieTypes, tvTypes } from "../../api/tmdbApi";
+import useDebounce from "../../hooks/useDebounce";
 import useScrollPosition from "../../hooks/useScrollPosition";
 import Container from "../Container";
 import MainContent from "../mainContent/MainContent";
@@ -14,15 +15,25 @@ function MediaList() {
 	const scrollPosition = useScrollPosition();
 	const [mediaData, setMediaData] = useState([]);
 	const [keyword, setKeyword] = useState("");
+	const debouncedKeyword = useDebounce(keyword, 500);
 
 	useEffect(() => {
 		const params = { page: 1 };
 		let response = null;
-		console.log(keyword);
+		console.log(debouncedKeyword);
 
 		if (states === null) {
-			if (keyword !== "") {
+			if (debouncedKeyword !== "") {
+				//fazer fetch baseado na keyword
 				console.log("entrou em keyword");
+				async function catchSearchData() {
+					const response = await tmdbApi.search(
+						mediaCategory.category,
+						{ query: debouncedKeyword }
+					);
+					setMediaData(response.results);
+				}
+				catchSearchData();
 			} else {
 				// fazer um fetch baseado em movie ou tv popular
 				//caso digite no input, fazer nova pesquisa.
@@ -75,7 +86,7 @@ function MediaList() {
 			catchMedia();
 		}
 		window.scrollTo(0, 0);
-	}, [mediaCategory, states, keyword]);
+	}, [mediaCategory, states, debouncedKeyword]);
 
 	return (
 		<>

@@ -32,7 +32,7 @@ function Header() {
 	function refreshPage() {
 		setTimeout(() => {
 			window.location.reload(false);
-		}, 100);
+		}, 10);
 		console.log("page to reload");
 	}
 
