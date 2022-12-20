@@ -13,29 +13,38 @@ function MediaList() {
 	const states = location.state;
 	const scrollPosition = useScrollPosition();
 	const [mediaData, setMediaData] = useState([]);
+	const [keyword, setKeyword] = useState("");
 
 	useEffect(() => {
 		const params = { page: 1 };
 		let response = null;
+		console.log(keyword);
 
 		if (states === null) {
-			// fazer um fetch baseado em movie ou tv popular
-			//caso digite no input, fazer nova pesquisa.
-			console.log("entrou em null");
-			async function catchMediaWithStatesNull() {
-				if (mediaCategory.category === "movie") {
-					response = await tmdbApi.getMoviesList(movieTypes.popular, {
-						params,
-					});
-					setMediaData(response.results);
-				} else {
-					response = await tmdbApi.getTvList(tvTypes.popular, {
-						params,
-					});
-					setMediaData(response.results);
+			if (keyword !== "") {
+				console.log("entrou em keyword");
+			} else {
+				// fazer um fetch baseado em movie ou tv popular
+				//caso digite no input, fazer nova pesquisa.
+				console.log("entrou em null");
+				async function catchMediaWithStatesNull() {
+					if (mediaCategory.category === "movie") {
+						response = await tmdbApi.getMoviesList(
+							movieTypes.popular,
+							{
+								params,
+							}
+						);
+						setMediaData(response.results);
+					} else {
+						response = await tmdbApi.getTvList(tvTypes.popular, {
+							params,
+						});
+						setMediaData(response.results);
+					}
 				}
+				catchMediaWithStatesNull();
 			}
-			catchMediaWithStatesNull();
 		} else if (states && states.searchType === "discover") {
 			//fazer fetch com discover
 			console.log("entrou em discover");
@@ -66,7 +75,7 @@ function MediaList() {
 			catchMedia();
 		}
 		window.scrollTo(0, 0);
-	}, [mediaCategory, states]);
+	}, [mediaCategory, states, keyword]);
 
 	return (
 		<>
@@ -83,6 +92,8 @@ function MediaList() {
 					focus:text-neutral-50 focus:g-gradient-to-t focus:from-neutral-600 focus:to-neutral-700`}
 						type="text"
 						placeholder="Pesquise o título aqui"
+						value={keyword}
+						onChange={(e) => setKeyword(e.target.value)}
 					/>
 				</div>
 			) : (

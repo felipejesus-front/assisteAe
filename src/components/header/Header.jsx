@@ -29,6 +29,13 @@ function Header() {
 		setActive(activeIndex);
 	}, [pathname]);
 
+	function refreshPage() {
+		setTimeout(() => {
+			window.location.reload(false);
+		}, 100);
+		console.log("page to reload");
+	}
+
 	return (
 		<header
 			className={`transition-all sticky top-0 z-50 ${
@@ -42,7 +49,17 @@ function Header() {
 					</Link>
 					<ul className="flex justify-around self-center gap-10 sm:fixed sm:left-0  sm:bottom-0 sm:w-full sm:bg-neutral-900 sm:shadow sm:p-5">
 						{navList.map((nav, index) => (
-							<Link key={index} to={nav.path} className="flex">
+							<Link
+								key={index}
+								to={nav.path}
+								onClick={
+									nav.label === "Filmes" ||
+									nav.label === "Séries"
+										? refreshPage
+										: null
+								}
+								className="flex"
+							>
 								<li
 									className={`text-2xl leading-8 font-semibold hover:text-indigo-400 px-2 py-1 transition  ${
 										index === active
