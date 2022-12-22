@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Link do githubPages:
+<h1>https://felipejesus-front.github.io/assisteAe/</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<br>
+<br><br>
 
-In the project directory, you can run:
+# Download do arquivo figma feito para o projeto:
+- https://github.com/felipejesus-front/assisteAe/raw/main/AssiteAe-Design.fig
 
-### `npm start`
+## ℹ️ Como Usar
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+# Clone o repositório
+$ git clone https://github.com/felipejesus-front/assisteAe.git
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+# Instale as dependencias dentro da pasta /assisteAe
+$ npm install
 
-### `npm test`
+# Rode o server em modo desenvolvedor
+$ npm run dev
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# O app irá abrir uma tela com a aplicação, Caso não abra, copie o link gerado no terminal e cole no seu navegador. A cada modificação salva a aplicação reiniciará
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Tecnologias
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O projeto foi desenvolvido com as seguintes tecnologias:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Global
 
-### `npm run eject`
+-   [Npm](https://www.npmjs.com/)
+-   [VSCode](https://code.visualstudio.com)
+-   [Git Bash](https://gitforwindows.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> Frontend Web
+-   [ReactJS](https://reactjs.org)
+-   [creat react app](https://create-react-app.dev/)
+-   [Tailwindcss](https://tailwindcss.com/)
+-   [SwiperJs](https://swiperjs.com/)
+-   [Axios](https://axios-http.com/ptbr/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Imagens da aplicação:
+![image](https://user-images.githubusercontent.com/61891985/208733589-6589d058-81a2-4bee-8030-cb2375130355.png)
+![image](https://user-images.githubusercontent.com/61891985/208733641-0f26cf91-e285-4cc9-8e2f-772f32610561.png)
+![image](https://user-images.githubusercontent.com/61891985/208733859-7aa7648c-a6e4-4b68-b7b9-2e9552cd2276.png)
+![image](https://user-images.githubusercontent.com/61891985/208735131-7482d2e6-77ae-4c89-ab3e-c8e9b9e50b9d.png)
+![image](https://user-images.githubusercontent.com/61891985/208735424-7dd2c403-4dcb-4cdc-a55a-104486ead504.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Agradeço a atenção e tenha um ótimo dia
