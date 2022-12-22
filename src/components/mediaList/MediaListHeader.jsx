@@ -17,7 +17,7 @@ function MediaListHeader() {
 		${scrollPosition > 0 && params === null ? "hidden" : ""}`}
 		>
 			<Container>
-				<div className="flex flex-col pb-10 lg:items-center">
+				<div className="flex flex-col pb-10 lg:items-center lg:text-center">
 					<span className="text-4xl leading-10 font-semibold text-neutral-600 ">
 						{params
 							? ""
