@@ -50,7 +50,7 @@ function MediaDetailsHeader(props) {
 						})`,
 					}}
 				>
-					<Container className="absolute mt-40 xs:mt-28">
+					<Container className="absolute mt-40 xs:mt-28 max-h-[calc(90vh-7rem)] overflow-y-auto pb-28">
 						<div className="grid grid-cols-[4fr_8fr] px-4 items-center gap-10 lg:grid-cols-[1fr] lg:text-center lg:p-2">
 							<div className="lg:hidden">
 								{mediaData.poster_path ? (
