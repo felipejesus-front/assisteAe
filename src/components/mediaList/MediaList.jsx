@@ -112,7 +112,13 @@ function MediaList() {
 			)}
 			<MainContent>
 				<Container>
-					<div className="grid grid-cols-4 gap-10 mb-20 xl:px-2 md:grid-cols-2 xs:grid-cols-1">
+					<div
+						className={`grid grid-cols-4 gap-10 mb-20 xl:px-2 md:grid-cols-2 xs:grid-cols-1 duration-300 ${
+							scrollPosition > 0 && states === null
+								? "mt-[250px]"
+								: ""
+						} `}
+					>
 						{mediaData.map((media, index) => (
 							<MediaSlideContent
 								key={index}
