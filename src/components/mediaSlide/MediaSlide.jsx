@@ -81,9 +81,9 @@ function MediaSlide(props) {
 			</Container>
 			<Swiper
 				style={{ paddingTop: "30px", paddingBottom: "30px" }}
-				className="relative  before:content-[''] before:block before:left-0 before:top-0 before:h-full before:w-[10%] before:absolute
+				className="relative  before:content-[''] before:block before:left-0 before:top-0 before:h-full before:w-[10%] before:absolute before:pointer-events-none
 				before:bg-gradient-to-r from-neutral-800 before:z-10  after:content-[''] after:block after:right-0 after:top-0 after:h-full after:w-[10%] after:absolute
-				after:bg-gradient-to-l after:from-neutral-800 after:z-[9]"
+				after:bg-gradient-to-l after:from-neutral-800 after:z-[9] after:pointer-events-none "
 				slidesPerView={1}
 				initialSlide={1}
 				navigation={true}
