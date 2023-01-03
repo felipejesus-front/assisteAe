@@ -58,8 +58,8 @@ function HeaderSlide() {
 							key={index}
 							className="flex justify-center relative 
 							bg-cover bg-no-repeat bg-center
-							before:content-[''] before:block before:bg-neutral-900 before:opacity-60 before:h-[90vh] before:w-full
-							after:content-[''] after:block after:bottom-0 after:h-40 after:w-full after:absolute
+							before:content-[''] before:block before:bg-neutral-900 before:opacity-60 before:h-[850px] before:w-full before:lg:h-[650px]
+							after:content-[''] after:block after:bottom-0 after:h-40 after:w-full after:absolute after:pointer-events-none
 							after:bg-gradient-to-t from-neutral-900 sm:after:h-20"
 							style={{
 								backgroundImage: `url(${apiConfig.originalImage(
