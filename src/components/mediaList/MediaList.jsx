@@ -99,7 +99,7 @@ function MediaList() {
 				>
 					<input
 						className={`w-full h-24 border-none text-neutral-400 pl-[calc(50%-600px)] text-xl leading-7 font-normal appearance-none	
-					bg-gradient-to-t from-neutral-700 to-neutral-600
+					bg-gradient-to-t from-neutral-700 to-neutral-600 lg:px-3
 					focus:text-neutral-50 focus:g-gradient-to-t focus:from-neutral-600 focus:to-neutral-700`}
 						type="text"
 						placeholder="Pesquise o título aqui"
