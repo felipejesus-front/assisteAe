@@ -5,6 +5,11 @@
 <br>
 <br><br>
 
+# AssisteAê is an application to find what to watch and where to watch it. It was developed using React and the TMDB API
+
+<br>
+<br><br>
+
 # Download the figma file made for the project:
 - https://github.com/felipejesus-front/assisteAe/raw/main/AssiteAe-Design.fig
 
