@@ -69,7 +69,7 @@ function MediaDetailsHeader(props) {
 									/>
 								) : null}
 							</div>
-							<div>
+							<div className="max-h-[40rem] overflow-y-auto scrollbar">
 								<div className="mb-10">
 									<h1
 										className={`text-6xl leading-[4.5rem] font-semibold duration-300 delay-300 max-w-2xl overflow-hidden sm:text-4xl`}
